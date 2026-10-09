@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shifaulhasan.github.io/sitemap.xml
