@@ -14,7 +14,7 @@ I am a Computer Science and Engineering graduate from **IUBAT** (B.Eng. in CSE, 
 
 ## 📌 Sections
 
-> 📝 *Edit this list to match the sections in your `index.html`.*
+
 
 - About me
 - Education
