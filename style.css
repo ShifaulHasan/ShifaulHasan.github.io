@@ -143,3 +143,19 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .edu-card .gpa{font-weight:500;margin-bottom:8px}
 .edu-card p:last-child{font-size:.95rem;color:var(--muted)}
 .edu-card .gpa + p{font-size:.95rem;color:var(--muted)}
+
+/* ---------- v5: richer education cards and contact form ---------- */
+.edu-card .desc{margin-top:4px;font-size:.95rem;color:var(--muted)}
+.edu-card p.act{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--ink)}
+.form{display:grid;gap:14px;max-width:640px;margin-bottom:28px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:grid;gap:6px;font-size:.88rem;color:var(--muted)}
+.form input,.form textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:11px 13px;width:100%;resize:vertical;transition:border-color .2s,box-shadow .2s}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--cool);box-shadow:0 0 0 3px color-mix(in srgb,var(--cool) 25%,transparent)}
+.form .invalid{border-color:var(--heat)}
+.form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.send{cursor:pointer;font:inherit;font-weight:500;padding:13px 20px}
+.send:disabled{opacity:.6;cursor:wait}
+.status{min-height:1.4em;font-size:.95rem;color:var(--muted)}
+.status.ok{color:#2E8B57}.status.err{color:var(--heat)}
+@media (max-width:760px){.form .row{grid-template-columns:1fr}}

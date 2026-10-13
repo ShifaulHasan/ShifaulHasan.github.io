@@ -109,3 +109,34 @@ addEventListener("scroll", () => {
   topBtn.classList.toggle("show", h.scrollTop > 600);
 }, { passive: true });
 topBtn.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+
+// 12. Contact form: Formspree if configured, otherwise opens the visitor's email app
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+const MY_EMAIL = "shifaulhasantaship@gmail.com";
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const fields = [...form.querySelectorAll("input[required], textarea[required]")];
+  let ok = true;
+  fields.forEach(f => { const bad = !f.value.trim() || (f.type === "email" && !f.checkValidity()); f.classList.toggle("invalid", bad); if (bad) ok = false; });
+  if (!ok) { status.className = "status err"; status.textContent = "Please fill in every field with a valid email."; return; }
+  const d = Object.fromEntries(new FormData(form));
+  if (d._gotcha) return;                      // spam bot caught
+  const btn = form.querySelector("button");
+  if (form.action.includes("YOUR_FORM_ID")) { // not set up yet: fall back to mailto
+    const body = `${d.message}\n\nFrom: ${d.name} (${d.email})`;
+    location.href = `mailto:${MY_EMAIL}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(body)}`;
+    status.className = "status ok"; status.textContent = "Opening your email app...";
+    return;
+  }
+  btn.disabled = true; status.className = "status"; status.textContent = "Sending...";
+  try {
+    const r = await fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) });
+    if (!r.ok) throw new Error();
+    form.reset(); status.className = "status ok"; status.textContent = "Thank you! Your message has been sent.";
+  } catch (err) {
+    status.className = "status err"; status.textContent = "Could not send. Please email me directly at " + MY_EMAIL;
+  }
+  btn.disabled = false;
+});
+form.addEventListener("input", e => e.target.classList.remove("invalid"));
