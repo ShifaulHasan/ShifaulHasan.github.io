@@ -159,3 +159,17 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .status{min-height:1.4em;font-size:.95rem;color:var(--muted)}
 .status.ok{color:#2E8B57}.status.err{color:var(--heat)}
 @media (max-width:760px){.form .row{grid-template-columns:1fr}}
+
+/* certificate verify link */
+.verify{display:inline-block;margin-top:14px;padding:6px 14px;border:1px solid var(--cool);border-radius:99px;color:var(--cool);font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s}
+.verify:hover{background:var(--cool);color:var(--paper)}
+
+/* certificate cards */
+.cert .thumb{display:block;margin:-6px -6px 16px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.cert .thumb img{display:block;width:100%;height:auto;transition:transform .3s}
+.cert .thumb:hover img{transform:scale(1.03)}
+.cert .serial{margin-top:12px;font-size:.88rem;display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--muted)}
+.cert .serial code{font:500 .85rem ui-monospace,Consolas,monospace;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:2px 8px;word-break:break-all}
+.cert .serial .chip{padding:2px 12px;font-size:.82rem}
+.cert-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cert-links .verify{margin-top:0}

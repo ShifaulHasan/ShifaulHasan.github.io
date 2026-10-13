@@ -140,3 +140,10 @@ form.addEventListener("submit", async e => {
   btn.disabled = false;
 });
 form.addEventListener("input", e => e.target.classList.remove("invalid"));
+
+// 13. Copy certificate serial numbers
+document.querySelectorAll(".copy-serial").forEach(btn => btn.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = "Copied"; }
+  catch (e) { btn.textContent = "Select and copy"; }
+  setTimeout(() => (btn.textContent = "Copy"), 1800);
+}));
