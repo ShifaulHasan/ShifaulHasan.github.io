@@ -22,7 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="style.css?v=10">
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
@@ -38,6 +39,7 @@
       <a href="#education">Education</a>
       <a href="#certificates">Certificates</a>
       <a href="#skills">Skills</a>
+      <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="tools">
@@ -58,16 +60,17 @@
       <p class="role"><span class="pre">Passionate about</span> <span id="typed">medical image classification</span><span class="caret" aria-hidden="true"></span></p>
       <p class="lead">CSE graduate from IUBAT, Dhaka. I train deep learning models that read medical images and speech, and build web apps that run real inventory and billing.</p>
       <div class="actions">
-        <a class="btn primary" href="Md_Shifaul_Hasan_Academic_CV.pdf" download>↓ Download CV</a>
-        <a class="btn" href="#contact">✉ Contact me</a>
+        <a class="btn primary" href="Md_Shifaul_Hasan_Academic_CV.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
+        <a class="btn" href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact me</a>
         <a class="btn" href="#research">Read my research</a>
       </div>
       <ul class="social" aria-label="Profiles">
-        <li><a href="https://orcid.org/0009-0006-8828-4272" target="_blank" rel="noopener"><b>iD</b>ORCID</a></li>
-        <li><a href="https://scholar.google.com/citations?user=xDYj4gUAAAAJ" target="_blank" rel="noopener"><b>GS</b>Google Scholar</a></li>
-        <li><a href="https://github.com/ShifaulHasan" target="_blank" rel="noopener"><b>GH</b>GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/md-shifaul-hasan-3a4095203/" target="_blank" rel="noopener"><b>in</b>LinkedIn</a></li>
-        <li><a href="https://researchgate.net/profile/Md-Shifaul-Hasan" target="_blank" rel="noopener"><b>RG</b>ResearchGate</a></li>
+        <li><a class="b-email" href="mailto:shifaulhasantaship@gmail.com"><span class="ic"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>Email</a></li>
+        <li><a class="b-orcid" href="https://orcid.org/0009-0006-8828-4272" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-orcid" aria-hidden="true"></i></span>ORCID</a></li>
+        <li><a class="b-scholar" href="https://scholar.google.com/citations?user=xDYj4gUAAAAJ" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-google-scholar" aria-hidden="true"></i></span>Google Scholar</a></li>
+        <li><a class="b-github" href="https://github.com/ShifaulHasan" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-github" aria-hidden="true"></i></span>GitHub</a></li>
+        <li><a class="b-linkedin" href="https://www.linkedin.com/in/md-shifaul-hasan-3a4095203/" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>LinkedIn</a></li>
+        <li><a class="b-rg" href="https://researchgate.net/profile/Md-Shifaul-Hasan" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-researchgate" aria-hidden="true"></i></span>ResearchGate</a></li>
       </ul>
       <dl class="facts">
         <div><dt><span data-count="3">3</span></dt><dd>publications</dd></div>
@@ -151,7 +154,7 @@
   <div class="wrap two">
     <h2>Experience</h2>
     <div class="timeline">
-      <div class="item"><h3>Web development intern, Bangla Soft Computer</h3><div class="meta">1 October 2025 – 13 January 2026</div><p>Built the inventory management and smart billing system with Laravel and MySQL. Rated excellent for performance and conduct.</p></div>
+      <div class="item"><h3>Web development intern, Bangla Soft Computer</h3><div class="meta">1 October 2025 – 13 January 2026</div><p>Built the inventory management and smart billing system with Laravel and MySQL. Rated excellent for performance and conduct. <a href="#certificates">See the certificate</a>.</p></div>
       <div class="item"><h3>Private tutor</h3><div class="meta">2022 – 2024</div><p>Taught students one-to-one, explaining lessons clearly and patiently.</p></div>
     </div>
   </div>
@@ -200,7 +203,15 @@
     <h2 class="center">Certificates</h2>
     <div class="edu-grid">
       <article class="edu-card cert">
-        <a class="thumb" href="certificates/python-django-edge.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Python (Django) training"><img src="certificates/python-django-edge.jpg" alt="Certificate image: Python (Django) training" loading="lazy" onerror="this.parentNode.remove()"></a>
+        <a class="thumb" href="certificates/internship-bangla-soft-computer.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Web development internship certificate"><img src="certificates/internship-bangla-soft-computer.jpg" alt="Certificate image: Web development internship certificate" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
+        <h3>Web development internship certificate</h3>
+        <p class="school">Bangla Soft Computer</p>
+        <p class="meta">1 October 2025 – 13 January 2026 · issued 13 January 2026</p>
+        <p class="desc">Completed a web development internship as a Web Developer, building an inventory management and smart billing system. Performance and conduct rated excellent, with good communication skills and the ability to work independently and in a team.</p>
+        <div class="cert-links"><a class="verify" href="certificates/internship-bangla-soft-computer.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="http://www.banglasoftcomputer.com" target="_blank" rel="noopener">Company website ↗</a></div>
+      </article>
+      <article class="edu-card cert">
+        <a class="thumb" href="certificates/python-django-edge.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Python (Django) training"><img src="certificates/python-django-edge.jpg" alt="Certificate image: Python (Django) training" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
         <h3>Python (Django) training</h3>
         <p class="school">Jagannath University CSE · EDGE Project, Bangladesh Computer Council (ICT Division)</p>
         <p class="meta">Nov 2024 – Jun 2025 · 80 hours · issued 22 July 2025</p>
@@ -209,7 +220,15 @@
         <div class="cert-links"><a class="verify" href="certificates/python-django-edge.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="https://training.edge.gov.bd/certificate-validation" target="_blank" rel="noopener">Verify online ↗</a></div>
       </article>
       <article class="edu-card cert">
-        <a class="thumb" href="certificates/machine-learning-simplilearn.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Machine Learning course completion"><img src="certificates/machine-learning-simplilearn.jpg" alt="Certificate image: Machine Learning course completion" loading="lazy" onerror="this.parentNode.remove()"></a>
+        <a class="thumb" href="https://www.kaggle.com/certification/badges/mdshifaulhasan/30" target="_blank" rel="noopener" aria-label="Open certificate: Python Coder badge"><img src="certificates/python-coder-kaggle.jpg" alt="Certificate image: Python Coder badge" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
+        <h3>Python Coder badge</h3>
+        <p class="school">Kaggle</p>
+        <p class="meta">15 April 2025</p>
+        <p class="desc">Badge for proficiency in core Python programming concepts.</p>
+        <div class="cert-links"><a class="verify" href="https://www.kaggle.com/certification/badges/mdshifaulhasan/30" target="_blank" rel="noopener">Verify on Kaggle ↗</a></div>
+      </article>
+      <article class="edu-card cert">
+        <a class="thumb" href="certificates/machine-learning-simplilearn.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Machine Learning course completion"><img src="certificates/machine-learning-simplilearn.jpg" alt="Certificate image: Machine Learning course completion" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
         <h3>Machine Learning course completion</h3>
         <p class="school">Simplilearn SkillUp</p>
         <p class="meta">7 April 2025</p>
@@ -218,15 +237,7 @@
         <div class="cert-links"><a class="verify" href="certificates/machine-learning-simplilearn.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="https://www.simplilearn.com/contact-us" target="_blank" rel="noopener">Contact Simplilearn to verify ↗</a></div>
       </article>
       <article class="edu-card cert">
-        <a class="thumb" href="https://www.kaggle.com/certification/badges/mdshifaulhasan/30" target="_blank" rel="noopener" aria-label="Open certificate: Python Coder badge"><img src="certificates/python-coder-kaggle.jpg" alt="Certificate image: Python Coder badge" loading="lazy" onerror="this.parentNode.remove()"></a>
-        <h3>Python Coder badge</h3>
-        <p class="school">Kaggle</p>
-        <p class="meta">April 2025</p>
-        <p class="desc">Badge for proficiency in core Python programming concepts.</p>
-        <div class="cert-links"><a class="verify" href="https://www.kaggle.com/certification/badges/mdshifaulhasan/30" target="_blank" rel="noopener">Verify on Kaggle ↗</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/ai-for-beginners-hp-life.pdf" target="_blank" rel="noopener" aria-label="Open certificate: AI for Beginners"><img src="certificates/ai-for-beginners-hp-life.jpg" alt="Certificate image: AI for Beginners" loading="lazy" onerror="this.parentNode.remove()"></a>
+        <a class="thumb" href="certificates/ai-for-beginners-hp-life.pdf" target="_blank" rel="noopener" aria-label="Open certificate: AI for Beginners"><img src="certificates/ai-for-beginners-hp-life.jpg" alt="Certificate image: AI for Beginners" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
         <h3>AI for Beginners</h3>
         <p class="school">HP LIFE (HP Foundation)</p>
         <p class="meta">20 March 2025</p>
@@ -235,12 +246,30 @@
         <div class="cert-links"><a class="verify" href="certificates/ai-for-beginners-hp-life.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="https://www.life-global.org/certificate/2fb18610-49d1-444d-ac22-1fa7f68e7610" target="_blank" rel="noopener">Verify online ↗</a></div>
       </article>
       <article class="edu-card cert">
-        <a class="thumb" href="certificates/data-analysis-excel-futurenation.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Data Analysis with Excel"><img src="certificates/data-analysis-excel-futurenation.jpg" alt="Certificate image: Data Analysis with Excel" loading="lazy" onerror="this.parentNode.remove()"></a>
+        <a class="thumb" href="certificates/data-analysis-excel-futurenation.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Data Analysis with Excel"><img src="certificates/data-analysis-excel-futurenation.jpg" alt="Certificate image: Data Analysis with Excel" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
         <h3>Data Analysis with Excel</h3>
         <p class="school">FutureNation (Grameenphone and UNDP initiative)</p>
         <p class="meta">17 March 2025</p>
         <p class="desc">Data analysis, data manipulation and reporting using Microsoft Excel.</p>
         <div class="cert-links"><a class="verify" href="certificates/data-analysis-excel-futurenation.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
+      </article>
+      <article class="edu-card cert">
+        <a class="thumb" href="certificates/ostad-data-science-fundamentals.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Data Science Fundamentals"><img src="certificates/ostad-data-science-fundamentals.jpg" alt="Certificate image: Data Science Fundamentals" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
+        <h3>Data Science Fundamentals</h3>
+        <p class="school">Ostad</p>
+        <p class="meta">Certificate of completion</p>
+        <p class="desc">Course completion certificate in data science fundamentals.</p>
+        <p class="serial"><span>Certificate ID</span> <code>C23947</code> <button type="button" class="chip copy-serial" data-copy="C23947">Copy</button></p>
+        <div class="cert-links"><a class="verify" href="certificates/ostad-data-science-fundamentals.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
+      </article>
+      <article class="edu-card cert">
+        <a class="thumb" href="certificates/ostad-product-management-basics.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Basics of Product Management"><img src="certificates/ostad-product-management-basics.jpg" alt="Certificate image: Basics of Product Management" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
+        <h3>Basics of Product Management</h3>
+        <p class="school">Ostad</p>
+        <p class="meta">Certificate of completion</p>
+        <p class="desc">Course completion certificate in the basics of product management.</p>
+        <p class="serial"><span>Certificate ID</span> <code>C23948</code> <button type="button" class="chip copy-serial" data-copy="C23948">Copy</button></p>
+        <div class="cert-links"><a class="verify" href="certificates/ostad-product-management-basics.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
       </article>
     </div>
   </div>
@@ -258,6 +287,27 @@
   </div>
 </section>
 </main>
+
+<section id="cv">
+  <div class="wrap two">
+    <h2>CV</h2>
+    <div>
+      <p class="intro">Two versions of my CV. The Academic CV is for research and PhD or Master's applications, and the Europass CV follows the standard European format.</p>
+      <div class="cv-cards">
+        <article class="cv-card">
+          <h3>Academic CV</h3>
+          <p>Research interests, publications, projects, skills and references.</p>
+          <a class="btn primary" href="Md_Shifaul_Hasan_Academic_CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</a>
+        </article>
+        <article class="cv-card">
+          <h3>Europass CV</h3>
+          <p>Education, work experience, certifications and language skills in the Europass format.</p>
+          <a class="btn primary" href="Md_Shifaul_Hasan_Europass_CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer id="contact">
   <div class="wrap two">
@@ -277,11 +327,12 @@
       </form>
       <p class="mail"><a id="email" href="mailto:shifaulhasantaship@gmail.com">shifaulhasantaship@gmail.com</a> <button id="copy" class="chip">Copy email</button></p>
       <ul class="social">
-        <li><a href="https://orcid.org/0009-0006-8828-4272" target="_blank" rel="noopener"><b>iD</b>ORCID</a></li>
-        <li><a href="https://scholar.google.com/citations?user=xDYj4gUAAAAJ" target="_blank" rel="noopener"><b>GS</b>Google Scholar</a></li>
-        <li><a href="https://github.com/ShifaulHasan" target="_blank" rel="noopener"><b>GH</b>GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/md-shifaul-hasan-3a4095203/" target="_blank" rel="noopener"><b>in</b>LinkedIn</a></li>
-        <li><a href="https://researchgate.net/profile/Md-Shifaul-Hasan" target="_blank" rel="noopener"><b>RG</b>ResearchGate</a></li>
+        <li><a class="b-email" href="mailto:shifaulhasantaship@gmail.com"><span class="ic"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>Email</a></li>
+        <li><a class="b-orcid" href="https://orcid.org/0009-0006-8828-4272" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-orcid" aria-hidden="true"></i></span>ORCID</a></li>
+        <li><a class="b-scholar" href="https://scholar.google.com/citations?user=xDYj4gUAAAAJ" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-google-scholar" aria-hidden="true"></i></span>Google Scholar</a></li>
+        <li><a class="b-github" href="https://github.com/ShifaulHasan" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-github" aria-hidden="true"></i></span>GitHub</a></li>
+        <li><a class="b-linkedin" href="https://www.linkedin.com/in/md-shifaul-hasan-3a4095203/" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>LinkedIn</a></li>
+        <li><a class="b-rg" href="https://researchgate.net/profile/Md-Shifaul-Hasan" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-researchgate" aria-hidden="true"></i></span>ResearchGate</a></li>
       </ul>
       <p class="small">© <span id="year">2026</span> Md. Shifaul Hasan</p>
     </div>
@@ -289,6 +340,6 @@
 </footer>
 
 <button class="to-top" id="top-btn" aria-label="Back to top">↑</button>
-<script src="script.js?v=7"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>

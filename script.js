@@ -84,7 +84,7 @@ document.querySelectorAll("[data-count]").forEach(el => counters.observe(el));
 const reveal = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add("in"); reveal.unobserve(e.target); }
 }), { threshold: .12 });
-document.querySelectorAll(".pub, .project, .timeline .item, .edu-card, .skills, .intro, section h2").forEach(el => {
+document.querySelectorAll(".pub, .project, .timeline .item, .edu-card, .cv-card, .skills, .intro, section h2").forEach(el => {
   el.classList.add("reveal"); reveal.observe(el);
 });
 

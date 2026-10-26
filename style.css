@@ -173,3 +173,27 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .cert .serial .chip{padding:2px 12px;font-size:.82rem}
 .cert-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .cert-links .verify{margin-top:0}
+
+/* ---------- v8: brand icons ---------- */
+.social a{padding:5px 14px 5px 5px}
+.social .ic{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--brand,var(--ink));color:#fff;font-size:.95rem;flex:none}
+.social a:hover{border-color:var(--brand,var(--heat))}
+.b-orcid{--brand:#A6CE39}
+.b-scholar{--brand:#4285F4}
+.b-github .ic{background:var(--ink);color:var(--paper)}
+.b-linkedin{--brand:#0A66C2}
+.b-rg{--brand:#00B8A9}
+.b-email{--brand:#EA4335}
+.btn i{margin-right:6px}
+
+/* ---------- v9: CV cards, certificate note ---------- */
+.cert .note{margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
+.cv-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.cv-card{padding:22px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:transform .2s,border-color .2s}
+.cv-card:hover{transform:translateY(-3px);border-color:var(--heat)}
+.cv-card h3{font-size:1.2rem}
+.cv-card p{margin:8px 0 16px;color:var(--muted);font-size:.95rem}
+
+/* placeholder when a certificate image is missing */
+.cert .thumb.noimg{display:grid;place-items:center;height:150px;background:var(--paper);border-style:dashed}
+.cert .thumb.noimg::before{content:"\f559";font:900 2.6rem "Font Awesome 6 Free";color:var(--cool)}
