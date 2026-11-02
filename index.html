@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=13">
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
@@ -51,6 +51,7 @@
 
 <main id="top">
 <section class="hero" id="hero">
+  <canvas id="neural" aria-hidden="true"></canvas>
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap grid">
     <div>
@@ -140,11 +141,31 @@
         <h3>LMS library management system</h3>
         <div class="meta">DBMS lab · MySQL, web</div>
         <p>Database-backed library system with user profiles, search filters for book availability and rental history.</p>
+        <p class="plink"><a href="https://github.com/ShifaulHasan/LMS" target="_blank" rel="noopener">Source code ↗</a></p>
       </article>
       <article class="project" data-cat="web">
         <h3>Expense tracker</h3>
         <div class="meta">PHP, MySQL, CSS</div>
         <p>Personal expense manager with user login, create/read/update/delete for daily spending and monthly reports.</p>
+        <p class="plink"><a href="https://github.com/ShifaulHasan/expensepro_plus" target="_blank" rel="noopener">Source code ↗</a></p>
+      </article>
+      <article class="project" data-cat="web">
+        <h3>Daily task management app</h3>
+        <div class="meta">Laravel 12, Tailwind CSS</div>
+        <p>A daily task manager built with Laravel and styled with Tailwind CSS.</p>
+        <p class="plink"><a href="https://github.com/ShifaulHasan/daily-task-management" target="_blank" rel="noopener">Source code ↗</a></p>
+      </article>
+      <article class="project" data-cat="web">
+        <h3>Smart task tracker</h3>
+        <div class="meta">HTML, CSS, JavaScript</div>
+        <p>A to-do web app built with plain HTML, CSS and JavaScript.</p>
+        <p class="plink"><a href="https://github.com/ShifaulHasan/Smart-Task-Tracker" target="_blank" rel="noopener">Source code ↗</a></p>
+      </article>
+      <article class="project" data-cat="web">
+        <h3>Digital clock and date display</h3>
+        <div class="meta">HTML, CSS, JavaScript</div>
+        <p>A live clock web page that shows the current time and date.</p>
+        <p class="plink"><a href="https://github.com/ShifaulHasan/Digital-Clock-Date-Display" target="_blank" rel="noopener">Source code ↗</a></p>
       </article>
     </div>
   </div>
@@ -201,77 +222,9 @@
 <section id="certificates">
   <div class="wrap">
     <h2 class="center">Certificates</h2>
-    <div class="edu-grid">
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/internship-bangla-soft-computer.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Web development internship certificate"><img src="certificates/internship-bangla-soft-computer.jpg" alt="Certificate image: Web development internship certificate" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Web development internship certificate</h3>
-        <p class="school">Bangla Soft Computer</p>
-        <p class="meta">1 October 2025 – 13 January 2026 · issued 13 January 2026</p>
-        <p class="desc">Completed a web development internship as a Web Developer, building an inventory management and smart billing system. Performance and conduct rated excellent, with good communication skills and the ability to work independently and in a team.</p>
-        <div class="cert-links"><a class="verify" href="certificates/internship-bangla-soft-computer.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="http://www.banglasoftcomputer.com" target="_blank" rel="noopener">Company website ↗</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/python-django-edge.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Python (Django) training"><img src="certificates/python-django-edge.jpg" alt="Certificate image: Python (Django) training" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Python (Django) training</h3>
-        <p class="school">Jagannath University CSE · EDGE Project, Bangladesh Computer Council (ICT Division)</p>
-        <p class="meta">Nov 2024 – Jun 2025 · 80 hours · issued 22 July 2025</p>
-        <p class="desc">Completed an 80-hour training on web development with Python and Django, conducted by the Department of CSE, Jagannath University under the EDGE Project.</p>
-        <p class="serial"><span>Serial no.</span> <code>EDGE-DSTS-106-2630-00016</code> <button type="button" class="chip copy-serial" data-copy="EDGE-DSTS-106-2630-00016">Copy</button></p>
-        <div class="cert-links"><a class="verify" href="certificates/python-django-edge.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="https://training.edge.gov.bd/certificate-validation" target="_blank" rel="noopener">Verify online ↗</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="https://www.kaggle.com/certification/badges/mdshifaulhasan/30" target="_blank" rel="noopener" aria-label="Open certificate: Python Coder badge"><img src="certificates/python-coder-kaggle.jpg" alt="Certificate image: Python Coder badge" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Python Coder badge</h3>
-        <p class="school">Kaggle</p>
-        <p class="meta">15 April 2025</p>
-        <p class="desc">Badge for proficiency in core Python programming concepts.</p>
-        <div class="cert-links"><a class="verify" href="https://www.kaggle.com/certification/badges/mdshifaulhasan/30" target="_blank" rel="noopener">Verify on Kaggle ↗</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/machine-learning-simplilearn.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Machine Learning course completion"><img src="certificates/machine-learning-simplilearn.jpg" alt="Certificate image: Machine Learning course completion" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Machine Learning course completion</h3>
-        <p class="school">Simplilearn SkillUp</p>
-        <p class="meta">7 April 2025</p>
-        <p class="desc">Foundational training in machine learning algorithms and concepts.</p>
-        <p class="serial"><span>Certificate code</span> <code>8153159</code> <button type="button" class="chip copy-serial" data-copy="8153159">Copy</button></p>
-        <div class="cert-links"><a class="verify" href="certificates/machine-learning-simplilearn.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="https://www.simplilearn.com/contact-us" target="_blank" rel="noopener">Contact Simplilearn to verify ↗</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/ai-for-beginners-hp-life.pdf" target="_blank" rel="noopener" aria-label="Open certificate: AI for Beginners"><img src="certificates/ai-for-beginners-hp-life.jpg" alt="Certificate image: AI for Beginners" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>AI for Beginners</h3>
-        <p class="school">HP LIFE (HP Foundation)</p>
-        <p class="meta">20 March 2025</p>
-        <p class="desc">Key AI concepts and applications, why data matters for AI, how businesses use it, and its ethical implications.</p>
-        <p class="serial"><span>Serial no.</span> <code>2fb18610-49d1-444d-ac22-1fa7f68e7610</code> <button type="button" class="chip copy-serial" data-copy="2fb18610-49d1-444d-ac22-1fa7f68e7610">Copy</button></p>
-        <div class="cert-links"><a class="verify" href="certificates/ai-for-beginners-hp-life.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="verify" href="https://www.life-global.org/certificate/2fb18610-49d1-444d-ac22-1fa7f68e7610" target="_blank" rel="noopener">Verify online ↗</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/data-analysis-excel-futurenation.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Data Analysis with Excel"><img src="certificates/data-analysis-excel-futurenation.jpg" alt="Certificate image: Data Analysis with Excel" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Data Analysis with Excel</h3>
-        <p class="school">FutureNation (Grameenphone and UNDP initiative)</p>
-        <p class="meta">17 March 2025</p>
-        <p class="desc">Data analysis, data manipulation and reporting using Microsoft Excel.</p>
-        <div class="cert-links"><a class="verify" href="certificates/data-analysis-excel-futurenation.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/ostad-data-science-fundamentals.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Data Science Fundamentals"><img src="certificates/ostad-data-science-fundamentals.jpg" alt="Certificate image: Data Science Fundamentals" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Data Science Fundamentals</h3>
-        <p class="school">Ostad</p>
-        <p class="meta">Certificate of completion</p>
-        <p class="desc">Course completion certificate in data science fundamentals.</p>
-        <p class="serial"><span>Certificate ID</span> <code>C23947</code> <button type="button" class="chip copy-serial" data-copy="C23947">Copy</button></p>
-        <div class="cert-links"><a class="verify" href="certificates/ostad-data-science-fundamentals.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
-      </article>
-      <article class="edu-card cert">
-        <a class="thumb" href="certificates/ostad-product-management-basics.pdf" target="_blank" rel="noopener" aria-label="Open certificate: Basics of Product Management"><img src="certificates/ostad-product-management-basics.jpg" alt="Certificate image: Basics of Product Management" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></a>
-        <h3>Basics of Product Management</h3>
-        <p class="school">Ostad</p>
-        <p class="meta">Certificate of completion</p>
-        <p class="desc">Course completion certificate in the basics of product management.</p>
-        <p class="serial"><span>Certificate ID</span> <code>C23948</code> <button type="button" class="chip copy-serial" data-copy="C23948">Copy</button></p>
-        <div class="cert-links"><a class="verify" href="certificates/ostad-product-management-basics.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
-      </article>
-    </div>
+    <div class="cert-filters" id="cert-filters" role="group" aria-label="Filter certificates"></div>
+    <div class="edu-grid" id="cert-grid"></div>
+    <noscript><p class="intro">Please enable JavaScript to see the certificates.</p></noscript>
   </div>
 </section>
 
@@ -339,7 +292,15 @@
   </div>
 </footer>
 
+<dialog id="lightbox" aria-label="Certificate preview">
+  <div class="lb-body">
+    <button class="lb-close icon" type="button" aria-label="Close preview">✕</button>
+    <h3></h3>
+    <img alt="">
+    <div class="lb-links cert-links"></div>
+  </div>
+</dialog>
 <button class="to-top" id="top-btn" aria-label="Back to top">↑</button>
-<script src="script.js?v=11"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>
