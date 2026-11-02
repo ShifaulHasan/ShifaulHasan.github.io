@@ -221,3 +221,16 @@ dialog#lightbox::backdrop{background:rgba(5,12,15,.78);backdrop-filter:blur(3px)
 /* v13: keep the photo above the SH placeholder */
 .frame img{position:relative;z-index:1}
 .initials{z-index:0}
+
+/* verification block on education cards */
+.edu-card .serial{margin-top:12px;font-size:.88rem;display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--muted)}
+.edu-card .serial code{font:500 .85rem ui-monospace,Consolas,monospace;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.edu-card .serial .chip{padding:2px 12px;font-size:.82rem}
+.edu-card .cert-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.edu-card .cert-links .verify{margin-top:0}
+.edu-card p.note{margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
+
+/* email logo */
+.mail{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.mail .chip{margin-left:0}
+.mail-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#EA4335;color:#fff;font-size:1.05rem;flex:none;box-shadow:0 8px 20px -10px #EA4335}
