@@ -10,7 +10,6 @@ a:hover{color:var(--heat)}
 h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.12}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 
-/* nav */
 .nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
 .brand{font:700 1.05rem "Bricolage Grotesque",sans-serif;text-decoration:none}
@@ -22,7 +21,6 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.12}
 .icon:hover{border-color:var(--heat)}
 .burger{display:none}
 
-/* hero */
 .hero{padding:72px 0 56px}
 .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
 .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;letter-spacing:-.02em}
@@ -39,7 +37,6 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.12}
 .scan svg{width:100%;height:auto;display:block;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
 .scan figcaption{margin-top:12px;font-size:.88rem;color:var(--muted);text-align:center}
 
-/* sections */
 section,footer{padding:64px 0;border-top:1px solid var(--line)}
 h2{font-size:clamp(1.7rem,3.2vw,2.3rem);letter-spacing:-.01em}
 .two{display:grid;grid-template-columns:200px 1fr;gap:32px}
@@ -81,7 +78,6 @@ h2{font-size:clamp(1.7rem,3.2vw,2.3rem);letter-spacing:-.01em}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* ---------- v3: photo, motion, polish ---------- */
 #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cool),#3FA796,#F2B134,var(--heat));z-index:20}
 .hero{position:relative;overflow:hidden}
 .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(520px circle at var(--mx,70%) var(--my,30%),color-mix(in srgb,var(--heat) 16%,transparent),transparent 70%);transition:background .2s}
@@ -103,11 +99,9 @@ h2{font-size:clamp(1.7rem,3.2vw,2.3rem);letter-spacing:-.01em}
 
 .facts div{padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
 
-/* reveal on scroll, only when JS is on */
 .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 
-/* cards */
 .pub,.project{padding:20px 22px;margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:transform .2s,border-color .2s,box-shadow .2s}
 .pub:hover,.project:hover{transform:translateY(-3px);border-color:var(--heat);box-shadow:0 12px 28px -18px var(--ink)}
 .timeline .item{transition:border-color .2s}
@@ -121,7 +115,6 @@ h2{font-size:clamp(1.7rem,3.2vw,2.3rem);letter-spacing:-.01em}
 @media (max-width:760px){.photo{width:min(78%,300px);order:-1}}
 @media (prefers-reduced-motion:reduce){.ring{animation:none}.caret{animation:none}.js .reveal{opacity:1;transform:none;transition:none}}
 
-/* ---------- v4: hero text, social links, education cards ---------- */
 .accent{background:linear-gradient(100deg,var(--cool),#3FA796 45%,var(--heat));-webkit-background-clip:text;background-clip:text;color:transparent}
 .title{margin-top:12px;font:500 1.2rem "Bricolage Grotesque",sans-serif;color:var(--muted)}
 .role{margin-top:10px;font:500 1.05rem "IBM Plex Sans",sans-serif;color:var(--ink);min-height:1.6em}
@@ -144,7 +137,6 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .edu-card p:last-child{font-size:.95rem;color:var(--muted)}
 .edu-card .gpa + p{font-size:.95rem;color:var(--muted)}
 
-/* ---------- v5: richer education cards and contact form ---------- */
 .edu-card .desc{margin-top:4px;font-size:.95rem;color:var(--muted)}
 .edu-card p.act{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--ink)}
 .form{display:grid;gap:14px;max-width:640px;margin-bottom:28px}
@@ -160,11 +152,9 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .status.ok{color:#2E8B57}.status.err{color:var(--heat)}
 @media (max-width:760px){.form .row{grid-template-columns:1fr}}
 
-/* certificate verify link */
 .verify{display:inline-block;margin-top:14px;padding:6px 14px;border:1px solid var(--cool);border-radius:99px;color:var(--cool);font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s}
 .verify:hover{background:var(--cool);color:var(--paper)}
 
-/* certificate cards */
 .cert .thumb{display:block;margin:-6px -6px 16px;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#fff}
 .cert .thumb img{display:block;width:100%;height:auto;transition:transform .3s}
 .cert .thumb:hover img{transform:scale(1.03)}
@@ -174,7 +164,6 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .cert-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .cert-links .verify{margin-top:0}
 
-/* ---------- v8: brand icons ---------- */
 .social a{padding:5px 14px 5px 5px}
 .social .ic{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--brand,var(--ink));color:#fff;font-size:.95rem;flex:none}
 .social a:hover{border-color:var(--brand,var(--heat))}
@@ -186,7 +175,6 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .b-email{--brand:#EA4335}
 .btn i{margin-right:6px}
 
-/* ---------- v9: CV cards, certificate note ---------- */
 .cert .note{margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
 .cv-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
 .cv-card{padding:22px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:transform .2s,border-color .2s}
@@ -194,11 +182,9 @@ h2.center::after{content:"";display:block;width:44px;height:3px;margin:12px auto
 .cv-card h3{font-size:1.2rem}
 .cv-card p{margin:8px 0 16px;color:var(--muted);font-size:.95rem}
 
-/* placeholder when a certificate image is missing */
 .cert .thumb.noimg{display:grid;place-items:center;height:150px;background:var(--paper);border-style:dashed}
 .cert .thumb.noimg::before{content:"\f559";font:900 2.6rem "Font Awesome 6 Free";color:var(--cool)}
 
-/* ---------- v12: full photo, neural hero, certificates filter + lightbox ---------- */
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.7}
 .ring{border-radius:32px;padding:6px}
 .frame{aspect-ratio:auto;border-radius:26px;min-height:260px;background:#fff;border-width:5px}
@@ -218,11 +204,9 @@ dialog#lightbox::backdrop{background:rgba(5,12,15,.78);backdrop-filter:blur(3px)
 .lb-links{margin-top:16px;justify-content:center}
 @media (max-width:760px){.frame img{max-height:460px}}
 
-/* v13: keep the photo above the SH placeholder */
 .frame img{position:relative;z-index:1}
 .initials{z-index:0}
 
-/* verification block on education cards */
 .edu-card .serial{margin-top:12px;font-size:.88rem;display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--muted)}
 .edu-card .serial code{font:500 .85rem ui-monospace,Consolas,monospace;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
 .edu-card .serial .chip{padding:2px 12px;font-size:.82rem}
@@ -230,7 +214,9 @@ dialog#lightbox::backdrop{background:rgba(5,12,15,.78);backdrop-filter:blur(3px)
 .edu-card .cert-links .verify{margin-top:0}
 .edu-card p.note{margin-top:10px;font-size:.8rem;color:var(--muted);font-style:italic}
 
-/* email logo */
 .mail{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
 .mail .chip{margin-left:0}
 .mail-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#EA4335;color:#fff;font-size:1.05rem;flex:none;box-shadow:0 8px 20px -10px #EA4335}
+
+.pub .abstract{margin-top:10px;color:var(--ink);font-size:.95rem;max-width:46em}
+.pub .abstract b{font-weight:500}

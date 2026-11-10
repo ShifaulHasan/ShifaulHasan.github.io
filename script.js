@@ -1,12 +1,16 @@
-// ===== Certificates: add or edit entries in this list, the cards are built from it =====
-// cat: "work" | "course" | "other".  file: name inside the certificates/ folder (no extension).
-// Use img / pdf only when the real file names are different from "file".
 const W = "http://www.banglasoftcomputer.com";
 const CERTS = [
+  { cat:"course", file:"using-generative-ai-manuscript-preparation-certificate", title:"Using Generative AI in Manuscript Preparation", issuer:"Elsevier Researcher Academy",
+    meta:"2 November 2026 · Online module",
+    desc:"Certificate of completion for the online module on using generative AI in manuscript preparation, presented by Dr. Inez van Korlaar.", links:[] },
   { cat:"work", file:"internship-bangla-soft-computer-redacted", title:"Web development internship certificate", issuer:"Bangla Soft Computer",
     meta:"1 October 2025 – 13 January 2026 · issued 13 January 2026",
     desc:"Completed a web development internship as a Web Developer, building an inventory management and smart billing system. Performance and conduct rated excellent, with good communication skills and the ability to work independently and in a team.",
     links:[[W,"Company website ↗"]] },
+  { cat:"event", title:"Project showcase, IUBAT IGNITRON 25.1", issuer:"Department of EEE and IUBAT Robotics Club, IUBAT",
+    meta:"1 August 2025 · Certificate of participation",
+    desc:"Presented the group project Automatic Railway Gate Control System in the Project Showcasing segment of IUBAT IGNITRON 25.1.",
+    img:"IUBAT_IGNITRON_Certificate.jpeg", pdf:"IUBAT_IGNITRON_Certificate.pdf", links:[] },
   { cat:"course", file:"python-django-edge", title:"Python (Django) training", issuer:"Jagannath University CSE · EDGE Project, Bangladesh Computer Council (ICT Division)",
     meta:"Nov 2024 – Jun 2025 · 80 hours · issued 22 July 2025",
     desc:"Completed an 80-hour training on web development with Python and Django, conducted by the Department of CSE, Jagannath University under the EDGE Project.",
@@ -20,19 +24,17 @@ const CERTS = [
   { cat:"course", file:"ai-for-beginners-hp-life", title:"AI for Beginners", issuer:"HP LIFE (HP Foundation)", meta:"20 March 2025",
     desc:"Key AI concepts and applications, why data matters for AI, how businesses use it, and its ethical implications.",
     serial:["Serial no.","2fb18610-49d1-444d-ac22-1fa7f68e7610"], links:[["https://www.life-global.org/certificate/2fb18610-49d1-444d-ac22-1fa7f68e7610","Verify online ↗"]] },
+  { cat:"course", title:"How to write an abstract and improve your article", issuer:"Elsevier Researcher Academy", meta:"18 March 2025 · 40-minute online module",
+    desc:"Certificate of completion for the online module on writing an abstract and improving an article, presented by Hannah Foreman.",
+    img:"Researcher Academy_Certificate.jpeg", pdf:"Researcher Academy_Certificate.pdf", links:[] },
   { cat:"course", file:"data-analysis-excel-futurenation", title:"Data Analysis with Excel", issuer:"FutureNation (Grameenphone and UNDP initiative)", meta:"17 March 2025",
     desc:"Data analysis, data manipulation and reporting using Microsoft Excel.", links:[] },
   { cat:"course", file:"ostad-data-science-fundamentals", title:"Data Science Fundamentals", issuer:"Ostad", meta:"Certificate of completion",
     desc:"Course completion certificate in data science fundamentals.", serial:["Certificate ID","C23947"], links:[] },
   { cat:"course", file:"ostad-product-management-basics", title:"Basics of Product Management", issuer:"Ostad", meta:"Certificate of completion",
-    desc:"Course completion certificate in the basics of product management.", serial:["Certificate ID","C23948"], links:[] },
-  { cat:"other", title:"IUBAT IGNITRON certificate", issuer:"IUBAT", meta:"", desc:"",
-    img:"IUBAT_IGNITRON_Certificate.jpeg", pdf:"IUBAT_IGNITRON_Certificate.pdf", links:[] },
-  { cat:"other", title:"Researcher Academy certificate", issuer:"Researcher Academy", meta:"", desc:"",
-    img:"Researcher Academy_Certificate.jpeg", pdf:"Researcher Academy_Certificate.pdf", links:[] },
-  { cat:"other", file:"using-generative-ai-manuscript-preparation-certificate", title:"Using Generative AI in Manuscript Preparation", issuer:"", meta:"", desc:"", links:[] }
+    desc:"Course completion certificate in the basics of product management.", serial:["Certificate ID","C23948"], links:[] }
 ];
-const CAT_NAMES = { all:"All", work:"Work", course:"Courses", other:"Other" };
+const CAT_NAMES = { all:"All", work:"Work", course:"Courses", event:"Events" };
 const certPath = f => encodeURI("certificates/" + f);
 CERTS.forEach(c => {
   c.imgUrl = certPath(c.img || c.file + ".jpg");
@@ -88,7 +90,6 @@ Object.keys(CAT_NAMES).forEach((k, i) => {
 });
 renderCerts("all");
 
-// 1. Dark / light theme (remembered in the browser)
 const root = document.documentElement;
 document.getElementById("theme").addEventListener("click", () => {
   const dark = getComputedStyle(root).getPropertyValue("--paper").trim() === "#0D1B20";
@@ -97,7 +98,6 @@ document.getElementById("theme").addEventListener("click", () => {
   try { localStorage.setItem("theme", next); } catch (e) {}
 });
 
-// 2. Mobile menu
 const burger = document.getElementById("burger");
 const menu = document.getElementById("menu");
 burger.addEventListener("click", () => {
@@ -108,7 +108,6 @@ menu.addEventListener("click", e => {
   if (e.target.tagName === "A") { menu.classList.remove("open"); burger.setAttribute("aria-expanded", false); }
 });
 
-// 3. Highlight the nav link of the section you are reading
 const links = [...menu.querySelectorAll("a")];
 const spy = new IntersectionObserver(entries => {
   entries.forEach(en => {
@@ -119,7 +118,6 @@ const spy = new IntersectionObserver(entries => {
 }, { rootMargin: "-40% 0px -55% 0px" });
 document.querySelectorAll("main section[id]").forEach(s => spy.observe(s));
 
-// 4. Project filter
 const chips = document.querySelectorAll(".filters .chip");
 const projects = document.querySelectorAll(".project");
 chips.forEach(chip => chip.addEventListener("click", () => {
@@ -127,7 +125,6 @@ chips.forEach(chip => chip.addEventListener("click", () => {
   projects.forEach(p => { p.hidden = chip.dataset.filter !== "all" && p.dataset.cat !== chip.dataset.filter; });
 }));
 
-// 5. Copy email
 const copy = document.getElementById("copy");
 copy.addEventListener("click", async () => {
   try {
@@ -137,10 +134,8 @@ copy.addEventListener("click", async () => {
   setTimeout(() => (copy.textContent = "Copy email"), 1800);
 });
 
-// 6. Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// 7. Typing effect for the role line
 const typed = document.getElementById("typed");
 const words = ["medical image classification", "speech emotion recognition", "deep learning research", "full-stack web development"];
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -155,7 +150,6 @@ if (!still) {
   })();
 }
 
-// 8. Count-up numbers
 const counters = new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
   counters.unobserve(e.target);
@@ -170,7 +164,6 @@ const counters = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .6 });
 document.querySelectorAll("[data-count]").forEach(el => counters.observe(el));
 
-// 9. Reveal on scroll
 const reveal = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add("in"); reveal.unobserve(e.target); }
 }), { threshold: .12 });
@@ -178,7 +171,6 @@ document.querySelectorAll(".pub, .project, .timeline .item, .edu-card, .cv-card,
   el.classList.add("reveal"); reveal.observe(el);
 });
 
-// 10. Glow follows the mouse, photo tilts
 const hero = document.getElementById("hero");
 const ring = document.querySelector(".ring");
 if (!still) hero.addEventListener("mousemove", e => {
@@ -190,7 +182,6 @@ if (!still) hero.addEventListener("mousemove", e => {
 });
 hero.addEventListener("mouseleave", () => (ring.style.transform = ""));
 
-// 11. Scroll progress bar and back-to-top button
 const bar = document.getElementById("progress");
 const topBtn = document.getElementById("top-btn");
 addEventListener("scroll", () => {
@@ -200,7 +191,6 @@ addEventListener("scroll", () => {
 }, { passive: true });
 topBtn.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
 
-// 12. Contact form: Formspree if configured, otherwise opens the visitor's email app
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 const MY_EMAIL = "shifaulhasantaship@gmail.com";
@@ -211,9 +201,9 @@ form.addEventListener("submit", async e => {
   fields.forEach(f => { const bad = !f.value.trim() || (f.type === "email" && !f.checkValidity()); f.classList.toggle("invalid", bad); if (bad) ok = false; });
   if (!ok) { status.className = "status err"; status.textContent = "Please fill in every field with a valid email."; return; }
   const d = Object.fromEntries(new FormData(form));
-  if (d._gotcha) return;                      // spam bot caught
+  if (d._gotcha) return;
   const btn = form.querySelector("button");
-  if (form.action.includes("YOUR_FORM_ID")) { // not set up yet: fall back to mailto
+  if (form.action.includes("YOUR_FORM_ID")) {
     const body = `${d.message}\n\nFrom: ${d.name} (${d.email})`;
     location.href = `mailto:${MY_EMAIL}?subject=${encodeURIComponent(d.subject)}&body=${encodeURIComponent(body)}`;
     status.className = "status ok"; status.textContent = "Opening your email app...";
@@ -231,7 +221,6 @@ form.addEventListener("submit", async e => {
 });
 form.addEventListener("input", e => e.target.classList.remove("invalid"));
 
-// 13. Copy certificate serial numbers (works for re-rendered cards too)
 document.addEventListener("click", async e => {
   const btn = e.target.closest(".copy-serial");
   if (!btn) return;
@@ -240,7 +229,6 @@ document.addEventListener("click", async e => {
   setTimeout(() => (btn.textContent = "Copy"), 1800);
 });
 
-// 14. Neural-network background in the hero (nodes drift, link up, and lean toward the mouse)
 (function () {
   const cv = document.getElementById("neural");
   if (!cv) return;

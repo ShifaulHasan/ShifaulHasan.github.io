@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Md. Shifaul Hasan – Machine learning researcher and web developer</title>
 <meta name="description" content="Portfolio of Md. Shifaul Hasan: medical image classification, speech emotion recognition and full-stack web development.">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon.ico?v=2" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#0D1B20">
 <link rel="canonical" href="https://shifaulhasan.github.io/">
 <meta name="author" content="Md. Shifaul Hasan">
 <meta name="keywords" content="Md. Shifaul Hasan, Shifaul Hasan, machine learning, skin lesion classification, speech emotion recognition, IUBAT, Dhaka, portfolio">
@@ -14,8 +18,6 @@
 <meta property="og:url" content="https://shifaulhasan.github.io/">
 <meta property="og:image" content="https://shifaulhasan.github.io/photo.jpg">
 <meta name="twitter:card" content="summary">
-<!-- After Google Search Console gives you a verification tag, paste it on the next line:
-<meta name="google-site-verification" content="PASTE_CODE_HERE"> -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Md. Shifaul Hasan","url":"https://shifaulhasan.github.io/","image":"https://shifaulhasan.github.io/photo.jpg","jobTitle":"Machine learning researcher and full-stack developer","alumniOf":"International University of Business Agriculture and Technology (IUBAT)","email":"mailto:shifaulhasantaship@gmail.com","sameAs":["https://orcid.org/0009-0006-8828-4272","https://scholar.google.com/citations?user=xDYj4gUAAAAJ","https://github.com/ShifaulHasan","https://www.linkedin.com/in/md-shifaul-hasan-3a4095203/","https://researchgate.net/profile/Md-Shifaul-Hasan"]}
 </script>
@@ -23,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=16">
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
@@ -95,24 +97,33 @@
   <div class="wrap two">
     <h2>Research</h2>
     <div>
-      <p class="intro">My work focuses on medical image classification and speech emotion recognition. My bachelor's thesis, supervised by Anwar Hossain Efat, proposed attention-based stacked ensembles for skin lesion classification on HAM10000.</p>
+      <p class="intro">My research applies deep learning to medical image analysis and speech emotion recognition, with a focus on reliable, interpretable AI for healthcare. My bachelor's thesis, supervised by Anwar Hossain Efat, led to two publications in Digital Health (SAGE).</p>
+
       <article class="pub">
         <h3>Enhancing skin lesion classification using a Tri-Path Attention Stacked Ensemble architecture with Cohen's Kappa Proportioned Averaging</h3>
         <p>Hasan, Efat, Bhuiyan &amp; Mansia · Digital Health, 2026</p>
-        <span class="tag">94.44% accuracy</span><span class="tag">HAM10000</span>
-        <p><a href="https://doi.org/10.1177/20552076261462026">doi:10.1177/20552076261462026</a></p>
+        <p class="abstract">Developed the Tri-Path Attention Stacked Ensemble (TASE) for 7-class skin lesion classification on HAM10000 (10,015 dermoscopic images). It combines seven fine-tuned EfficientNetV2 backbones with triplet attention (soft, channel and squeeze-excitation) and a new Cohen's Kappa proportioned averaging method that fuses predictions across two ensemble layers while handling class imbalance. Grad-CAM is used for interpretability.</p>
+        <p class="abstract"><b>My role (first author):</b> methodology, software, validation, formal analysis, investigation and the original manuscript draft.</p>
+        <span class="tag">First author</span><span class="tag">94.44% accuracy</span><span class="tag">HAM10000</span>
+        <p><a href="https://doi.org/10.1177/20552076261462026" target="_blank" rel="noopener">doi:10.1177/20552076261462026</a></p>
       </article>
+
       <article class="pub">
         <h3>Hierarchical attention stacked ensemble with Matthews-correlation-coefficient weighted averaging: a novel framework for skin lesion classification</h3>
         <p>Bhuiyan, Efat, Hasan &amp; Mansia · Digital Health, 2026</p>
-        <span class="tag">93.96% accuracy</span><span class="tag">HAM10000</span>
-        <p><a href="https://doi.org/10.1177/20552076261433750">doi:10.1177/20552076261433750</a></p>
+        <p class="abstract">Proposed the Hierarchical Attention Stacked Ensemble (HASE) for 7-class skin lesion classification on HAM10000, based on my bachelor's thesis. The framework combines several EfficientNetV1 backbones using independent, serial and parallel stacking with triplet attention, and fuses predictions with multi-level Matthews-correlation-coefficient weighted averaging. Grad-CAM is used for interpretability.</p>
+        <p class="abstract"><b>My role (co-author):</b> software, investigation, formal analysis, and manuscript review and editing.</p>
+        <span class="tag">Co-author</span><span class="tag">93.96% accuracy</span><span class="tag">HAM10000</span>
+        <p><a href="https://doi.org/10.1177/20552076261433750" target="_blank" rel="noopener">doi:10.1177/20552076261433750</a></p>
       </article>
+
       <article class="pub">
         <h3>Emotion recognition from speech using LSTM-based deep learning model</h3>
         <p>Bhuiyan, Imran, Rony, Anni &amp; Hasan · Springer, presented at BIM 2025, Dhaka International University</p>
-        <span class="tag">LSTM</span><span class="tag">Speech</span>
-        <p><a href="https://link.springer.com/chapter/10.1007/978-3-032-15346-3_32" target="_blank" rel="noopener">Read on Springer ↗</a> · <a href="https://doi.org/10.1007/978-3-032-15346-3_32">doi:10.1007/978-3-032-15346-3_32</a></p>
+        <p class="abstract">Co-authored a speech emotion recognition study using an LSTM-based model with MFCC features from the RAVDESS dataset, classifying emotions such as happiness, sadness, anger and calmness (about 82% validation accuracy). Presented at the 3rd International Conference on Big Data, IoT and Machine Learning (25–27 September 2025).</p>
+        <p class="abstract"><b>My role (co-author):</b> worked on the LSTM model as part of the team.</p>
+        <span class="tag">Co-author</span><span class="tag">LSTM</span><span class="tag">RAVDESS</span>
+        <p><a href="https://link.springer.com/chapter/10.1007/978-3-032-15346-3_32" target="_blank" rel="noopener">Read on Springer ↗</a> · <a href="https://doi.org/10.1007/978-3-032-15346-3_32" target="_blank" rel="noopener">doi:10.1007/978-3-032-15346-3_32</a></p>
       </article>
     </div>
   </div>
@@ -131,11 +142,13 @@
         <h3>Skin lesion classification</h3>
         <div class="meta">Bachelor's thesis · Python, TensorFlow/Keras, EfficientNet</div>
         <p>Seven-class classifier trained on 10,015 dermoscopic images. Combines EfficientNet backbones with triplet attention and fuses model layers using MCC-weighted and Cohen's Kappa averaging. Grad-CAM shows which part of the lesion drives each prediction.</p>
+        <p class="plink"><a href="https://doi.org/10.1177/20552076261462026" target="_blank" rel="noopener">Paper 1: Tri-Path Attention Stacked Ensemble ↗</a> · <a href="https://doi.org/10.1177/20552076261433750" target="_blank" rel="noopener">Paper 2: Hierarchical Attention Stacked Ensemble ↗</a></p>
       </article>
       <article class="project" data-cat="web">
         <h3>Mini e-commerce: inventory and smart billing</h3>
         <div class="meta">Practicum project · Laravel, MySQL, Laravel Breeze</div>
         <p>Admins manage products and categories and view billing data. Customers browse the catalog and place orders. Role-based login separates the two, and orders use Eloquent transactions.</p>
+        <p class="plink"><a href="https://github.com/ShifaulHasan/mini-ecommerce" target="_blank" rel="noopener">Source code ↗</a></p>
       </article>
       <article class="project" data-cat="web">
         <h3>LMS library management system</h3>
@@ -304,6 +317,6 @@
   </div>
 </dialog>
 <button class="to-top" id="top-btn" aria-label="Back to top">↑</button>
-<script src="script.js?v=15"></script>
+<script src="script.js?v=16"></script>
 </body>
 </html>
