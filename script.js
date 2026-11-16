@@ -32,9 +32,21 @@ const CERTS = [
   { cat:"course", file:"ostad-data-science-fundamentals", title:"Data Science Fundamentals", issuer:"Ostad", meta:"Certificate of completion",
     desc:"Course completion certificate in data science fundamentals.", serial:["Certificate ID","C23947"], links:[] },
   { cat:"course", file:"ostad-product-management-basics", title:"Basics of Product Management", issuer:"Ostad", meta:"Certificate of completion",
-    desc:"Course completion certificate in the basics of product management.", serial:["Certificate ID","C23948"], links:[] }
+    desc:"Course completion certificate in the basics of product management.", serial:["Certificate ID","C23948"], links:[] },
+  { cat:"event", file:"southeast award", title:"Online Meritorious Student Felicitation 2020", issuer:"Southeast University, Dhaka",
+    meta:"26 June 2021 · Certificate of participation",
+    desc:"Took part in the online felicitation programme for meritorious students (Kriti Shikkharthi Sangbardhana 2020) organised by Southeast University. The certificate is signed by the Director of Branding, Communication and Public Relations, the Adviser of the Southeast University Trust and the Vice Chancellor.",
+    links:[] },
+  { cat:"award", file:"best-student-certificate", title:"Best Student Performance Award 2018", issuer:"BSB-Cambrian Education Group",
+    meta:"2018 · Certificate of Merit",
+    desc:"Awarded a Certificate of Merit for outstanding performance with GPA 5.00 in the SSC Examination 2018. Signed by the Vice Chairman and the Chairman of the BSB-Cambrian Education Group.",
+    links:[] },
+  { cat:"award", file:"school sports", title:"School and madrasa summer sports competition, football", issuer:"National School and Madrasa Sports Committee · Nawabganj Upazila, Dinajpur",
+    meta:"Upazila level · Football (boys) · Daudpur High School",
+    desc:"Certificate of achievement for securing a top-two place (1st/2nd) in the football event of the upazila-level national school and madrasa summer sports competition, representing Daudpur High School.",
+    links:[] }
 ];
-const CAT_NAMES = { all:"All", work:"Work", course:"Courses", event:"Events" };
+const CAT_NAMES = { all:"All", work:"Work", course:"Courses", event:"Events", award:"Awards" };
 const certPath = f => encodeURI("certificates/" + f);
 CERTS.forEach(c => {
   c.imgUrl = certPath(c.img || c.file + ".jpg");
