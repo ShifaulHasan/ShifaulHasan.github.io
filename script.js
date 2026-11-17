@@ -41,9 +41,9 @@ const CERTS = [
     meta:"2018 · Certificate of Merit",
     desc:"Awarded a Certificate of Merit for outstanding performance with GPA 5.00 in the SSC Examination 2018. Signed by the Vice Chairman and the Chairman of the BSB-Cambrian Education Group.",
     links:[] },
-  { cat:"award", file:"school sports", title:"School and madrasa summer sports competition, football", issuer:"National School and Madrasa Sports Committee · Nawabganj Upazila, Dinajpur",
-    meta:"Upazila level · Football (boys) · Daudpur High School",
-    desc:"Certificate of achievement for securing a top-two place (1st/2nd) in the football event of the upazila-level national school and madrasa summer sports competition, representing Daudpur High School.",
+  { cat:"award", file:"school sports", title:"SCHOOL AND MADRASA SUMMER SPORTS COMPETITION, FOOTBALL", issuer:"National School and Madrasa Sports Committee · Nawabganj Upazila, Dinajpur",
+    meta:"Upazila level · Football (boys) · Second position · Team captain",
+    desc:"Led the Daudpur High School football team as captain and secured second position in the upazila-level national school and madrasa summer sports competition, held in Nawabganj, Dinajpur. The certificate recognises the team's achievement in the boys' football event.",
     links:[] }
 ];
 const CAT_NAMES = { all:"All", work:"Work", course:"Courses", event:"Events", award:"Awards" };
